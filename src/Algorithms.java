@@ -64,6 +64,25 @@ public class Algorithms {
     }
 
 
+    /**
+     * Написать алгоритм RemoveAllSpaces.
+     * алгоритм, который принимает на вход строку.
+     * Если строка валидная, то метод удаляет все пробелы из строки, если таковые имеются.
+     * Метод возвращает обработанную строку.
+     * Test Data:
+     * “    QA   4  Everyone   “ →  “QA4Everyone“
+     * “p a     n d a   “ → “panda”
+     */
+
+    public static String removeAllSpaces(String str) {
+//        str = str.trim();
+        if (str.isEmpty() == false) {
+            str = str.replace(" ", "");
+        }
+        return str;
+    }
+
+
     public static void main(String[] args) {
         System.out.println(deleteSpaces("    QA4Everyone   "));
         System.out.println(deleteSpaces("QA4Everyone"));
@@ -74,7 +93,12 @@ public class Algorithms {
 
         System.out.println(removeAllZeros("   3 5 0 4 2 0 9 7 0 6 0 4 0       0 0 0 "));
         System.out.println(removeAllZeros(" 0000000111"));
+
+        System.out.println(removeAllSpaces("    QA   4  Everyone   "));
+        System.out.println(removeAllSpaces("p a     n d a   "));
+
     }
+
 
 }
 
