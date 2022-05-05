@@ -90,7 +90,7 @@ public class Algorithms {
         return str;
     }
 
-    /**
+    /** 5
      * Напишите метод, который принимает на вход строку и считает, сколько букв а или А содержится в строке.
      * Test Data:
      * “Abracadabra” → 5
@@ -109,7 +109,7 @@ public class Algorithms {
         return count;
     }
 
-    /**
+    /** 6
      * Напишите метод, который принимает на вход текст и проверяет, содержится ли в тексте хотя
      * бы одно слово Java.
      */
@@ -122,9 +122,21 @@ public class Algorithms {
         return false;
     }
 
+    /**
+     * 7
+     * Напишите метод, который принимает на вход строку, и добавляет Кавычки
+     * в начале строки, точку и кавычки в конце строки с помощью метода concat()
+     */
+    public static String addQuotationMarks(String str) {
+        String s = "\"";
+        return s.concat(str).concat(".\"");
+    }
+
 
     public static void main(String[] args) {
 
+
+        System.out.println(addQuotationMarks("One"));
         System.out.println(java("As of March 2022, Java 18 is the latest version, while Java 17, " +
                 "11 and 8 are the current long-term support (LTS) versions. Oracle released the last zero-cost public " +
                 "update for the legacy version Java 8 LTS in January 2019 for commercial use, although it will " +
