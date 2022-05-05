@@ -124,26 +124,6 @@ public class Algorithms {
 
 
     public static void main(String[] args) {
-//        System.out.println(deleteSpaces("    QA4Everyone   "));
-//        System.out.println(deleteSpaces("QA4Everyone"));
-//        System.out.println(deleteSpaces(""));
-//
-//        System.out.println(removeAlla("    QA4Everyone   "));
-//        System.out.println(removeAlla("panda   "));
-//
-//        System.out.println(removeAllZeros("   3 5 0 4 2 0 9 7 0 6 0 4 0       0 0 0 "));
-//        System.out.println(removeAllZeros(" 0000000111"));
-//
-//        System.out.println(removeAllSpaces("    QA   4  Everyone   "));
-//        System.out.println(removeAllSpaces("p a     n d a   "));
-
-//        System.out.println("___________________________________________");
-//
-//        String a = "Привет ";
-//        String b = "мир!";
-//        System.out.println(a.substring(2));
-
-//        System.out.println(countsLettersInAString("Abracadabra", "a"));
 
         System.out.println(java("As of March 2022, Java 18 is the latest version, while Java 17, " +
                 "11 and 8 are the current long-term support (LTS) versions. Oracle released the last zero-cost public " +
