@@ -2,6 +2,7 @@ import org.w3c.dom.ls.LSOutput;
 
 import java.util.Locale;
 
+
 public class Algorithms {
     /**
      * 1
@@ -71,8 +72,7 @@ public class Algorithms {
     }
 
 
-    /**
-     * 4
+    /** 4
      * Написать алгоритм RemoveAllSpaces.
      * алгоритм, который принимает на вход строку.
      * Если строка валидная, то метод удаляет все пробелы из строки, если таковые имеются.
@@ -101,7 +101,8 @@ public class Algorithms {
         if (str.isEmpty() == false) {
             str = str.toLowerCase();
             for (int i = 0; i < str.length(); i++) {
-                if (str.contains(a) == true) {
+//                if (str.contains("a") == true) {
+                if (str.charAt(i) == 'a'){
                     count++;
                 }
             }
@@ -129,34 +130,57 @@ public class Algorithms {
      */
     public static String addQuotationMarks(String str) {
         String s = "\"";
+        str = str.trim();
         return s.concat(str).concat(".\"");
+    }
+
+    /** 8
+     *Напишите метод, кторый принимает на вход название города и исправляет написание:
+     * Test Data:
+     * “ташкент” → “Ташкент”
+     * “ЧикаГО” → “Чикаго”
+     */
+
+    public static String nameSity(String sity){
+        if (sity.isEmpty() == false) {
+            sity.trim();
+            return (sity.substring(0,1).toUpperCase()).concat(sity.substring(1).toLowerCase());
+        }
+        return "Error";
     }
 
 
     public static void main(String[] args) {
 
+//        System.out.println(nameSity("ташкент"));
+//        System.out.println(nameSity("ЧикаГО"));
+        System.out.println(countsLettersInAString("Abracadabra","a"));
+        System.out.println(countsLettersInAString("Homenum Revelio","a"));
 
-        System.out.println(addQuotationMarks("One"));
-        System.out.println(java("As of March 2022, Java 18 is the latest version, while Java 17, " +
-                "11 and 8 are the current long-term support (LTS) versions. Oracle released the last zero-cost public " +
-                "update for the legacy version Java 8 LTS in January 2019 for commercial use, although it will " +
-                "otherwise still support Java 8 with public updates for personal use indefinitely. " +
-                "Other vendors have begun to offer zero-cost builds of OpenJDK 8 and 11 that are still receiving " +
-                "security and other upgrades."));
-        System.out.println(java("As a decrepit father takes delight\n" +
-                "To see his active child do deeds of youth,\n" +
-                "So I, made lame by fortune’s dearest spite,\n" +
-                "Take all my comfort of thy worth and truth.\n" +
-                "For whether beauty, birth, or wealth, or wit,\n" +
-                "Or any of these all, or all, or more,\n" +
-                "Entitled in thy parts do crownèd sit,\n" +
-                "I make my love engrafted to this store.\n" +
-                "So then I am not lame, poor, nor despised,\n" +
-                "Whilst that this shadow doth such substance give\n" +
-                "That I in thy abundance am sufficed,\n" +
-                "And by a part of all thy glory live.\n" +
-                "Look what is best, that best I wish in thee.\n" +
-                "This wish I have; then ten times happy me"));
+
+
+//        System.out.println(addQuotationMarks("One"));
+//        System.out.println(addQuotationMarks("    TWO  "));
+//        System.out.println(java("As of March 2022, Java 18 is the latest version, while Java 17, " +
+//                "11 and 8 are the current long-term support (LTS) versions. Oracle released the last zero-cost public " +
+//                "update for the legacy version Java 8 LTS in January 2019 for commercial use, although it will " +
+//                "otherwise still support Java 8 with public updates for personal use indefinitely. " +
+//                "Other vendors have begun to offer zero-cost builds of OpenJDK 8 and 11 that are still receiving " +
+//                "security and other upgrades."));
+//        System.out.println(java("As a decrepit father takes delight\n" +
+//                "To see his active child do deeds of youth,\n" +
+//                "So I, made lame by fortune’s dearest spite,\n" +
+//                "Take all my comfort of thy worth and truth.\n" +
+//                "For whether beauty, birth, or wealth, or wit,\n" +
+//                "Or any of these all, or all, or more,\n" +
+//                "Entitled in thy parts do crownèd sit,\n" +
+//                "I make my love engrafted to this store.\n" +
+//                "So then I am not lame, poor, nor despised,\n" +
+//                "Whilst that this shadow doth such substance give\n" +
+//                "That I in thy abundance am sufficed,\n" +
+//                "And by a part of all thy glory live.\n" +
+//                "Look what is best, that best I wish in thee.\n" +
+//                "This wish I have; then ten times happy me"));
     }
 
 
