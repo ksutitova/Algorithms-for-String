@@ -153,36 +153,31 @@ public class Algorithms {
     }
 
 
+    /** 9
+     * Напишите метод, который принимает на вход строку, и возвращает все,
+     * что находится между первой и последней буквой-параметром:
+     * Test Data:
+     * “Abracadabra”, “b” → “bracadab”
+     * “Whippersnapper”, “p” → “ppersnapp”
+     */
+    public static String indexOneLast(String s, String index){
+        return s.substring(s.indexOf(index),s.lastIndexOf(index));
+    }
+
+
+    /** 10
+     * Напишите метод, который принимает на вход слово, и возвращает true, если слово начинается и заканчивается на одинаковую букву, и faulse иначе
+     * Test Data:
+     * 	“Abracadabra” → true
+     * 	“Whippersnapper” → false
+     */
+
+
     public static void main(String[] args) {
+        String s = "\"As of March 2022, Java 18 is the latest version";
+        System.out.println(indexOneLast("Abracadabra","b"));
+        System.out.println(indexOneLast("Whippersnapper","p"));
 
-        System.out.println(nameSity("ташкент"));
-        System.out.println(nameSity("ЧикаГО"));
-        System.out.println(countsLettersInAString("Abracadabra", "a"));
-        System.out.println(countsLettersInAString("Homenum Revelio", "a"));
-
-
-        System.out.println(addQuotationMarks("One"));
-        System.out.println(addQuotationMarks("    TWO  "));
-        System.out.println(java("As of March 2022, Java 18 is the latest version, while Java 17, " +
-                "11 and 8 are the current long-term support (LTS) versions. Oracle released the last zero-cost public " +
-                "update for the legacy version Java 8 LTS in January 2019 for commercial use, although it will " +
-                "otherwise still support Java 8 with public updates for personal use indefinitely. " +
-                "Other vendors have begun to offer zero-cost builds of OpenJDK 8 and 11 that are still receiving " +
-                "security and other upgrades."));
-        System.out.println(java("As a decrepit father takes delight\n" +
-                "To see his active child do deeds of youth,\n" +
-                "So I, made lame by fortune’s dearest spite,\n" +
-                "Take all my comfort of thy worth and truth.\n" +
-                "For whether beauty, birth, or wealth, or wit,\n" +
-                "Or any of these all, or all, or more,\n" +
-                "Entitled in thy parts do crownèd sit,\n" +
-                "I make my love engrafted to this store.\n" +
-                "So then I am not lame, poor, nor despised,\n" +
-                "Whilst that this shadow doth such substance give\n" +
-                "That I in thy abundance am sufficed,\n" +
-                "And by a part of all thy glory live.\n" +
-                "Look what is best, that best I wish in thee.\n" +
-                "This wish I have; then ten times happy me"));
     }
 
 
