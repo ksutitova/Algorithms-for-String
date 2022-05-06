@@ -154,35 +154,38 @@ public class Algorithms {
     }
 
 
-    /** 9
+    /**
+     * 9
      * Напишите метод, который принимает на вход строку, и возвращает все,
      * что находится между первой и последней буквой-параметром:
      * Test Data:
      * “Abracadabra”, “b” → “bracadab”
      * “Whippersnapper”, “p” → “ppersnapp”
      */
-    public static String indexOneLast(String s, String index){
-        return s.substring(s.indexOf(index),s.lastIndexOf(index));
+    public static String indexOneLast(String s, String index) {
+        return s.substring(s.indexOf(index), s.lastIndexOf(index));
     }
 
 
-    /** 10
+    /**
+     * 10
      * Напишите метод, который принимает на вход слово, и возвращает true,
      * если слово начинается и заканчивается на одинаковую букву, и faulse иначе
      * Test Data:
-     * 	“Abracadabra” → true
-     * 	“Whippersnapper” → false
+     * “Abracadabra” → true
+     * “Whippersnapper” → false
      */
 
-    public static boolean oneLast(String s){
-       String index = "";
-       if(s.indexOf(index) == s.lastIndexOf(index)) {
-           return true;
-       }
+    public static boolean oneLast(String s) {
+        String index = "";
+        if (s.indexOf(index) == s.lastIndexOf(index)) {
+            return true;
+        }
         return false;
     }
 
-    /** 11
+    /**
+     * 11
      * Напишите метод, который принимает на вход предложение и возвращает
      * слова из этого предложения в виде массива слов
      * Test Data:
@@ -190,12 +193,27 @@ public class Algorithms {
      * “Александр Сергеевич Пушкин” → {“Александр”, “Сергеевич”, “Пушкин”}
      */
 
-    public static String[] ArrayString(String str){
-       String[] arrayStr = str.split(" ");
-       return arrayStr;
+    public static String[] ArrayString(String str) {
+        String[] arrayStr = str.split(" ");
+        return arrayStr;
     }
 
+    /**
+     * 12
+     * Написать метод, который принимает на вход предложение, которое состоит из имени,
+     * фамилии, отчества и возвращает массив строк:
+     * Test Data:
+     * “Александр Сергеевич Пушкин” →
+     * {“Имя: Александр”, “Отчество: Сергеевич”, “Фамилия: Пушкин”}
+     */
 
+    public static String[] arrayName(String str) {
+        String[] arrayStr = str.split(" ");
+//        for(int i= 0; i < str.length(); i++){
+        System.out.println("\"Имя: " + arrayStr[0] + "\" , \" Фамилия: " + arrayStr[1] +
+                "\" , \" Отчество: " + arrayStr[2] + "\" ");
+        return arrayStr;
+    }
 
 
     public static void main(String[] args) {
@@ -203,8 +221,9 @@ public class Algorithms {
 //        System.out.println(oneLast("Abracadabra"));
 //        System.out.println(oneLast("Whippersnapper"));
 
-        System.out.println(Arrays.toString(ArrayString("QA for Everyone")));
-        System.out.println(Arrays.toString(ArrayString("Александр Сергеевич Пушкин")));
+//        System.out.println(Arrays.toString(ArrayString("QA for Everyone")));
+//        System.out.println(Arrays.toString(ArrayString("Александр Сергеевич Пушкин")));
+        System.out.println(Arrays.toString(arrayName("Александр Сергеевич Пушкин")));
 
     }
 
