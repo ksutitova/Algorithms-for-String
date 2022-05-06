@@ -1,5 +1,6 @@
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.Arrays;
 import java.util.Locale;
 
 
@@ -166,17 +167,44 @@ public class Algorithms {
 
 
     /** 10
-     * Напишите метод, который принимает на вход слово, и возвращает true, если слово начинается и заканчивается на одинаковую букву, и faulse иначе
+     * Напишите метод, который принимает на вход слово, и возвращает true,
+     * если слово начинается и заканчивается на одинаковую букву, и faulse иначе
      * Test Data:
      * 	“Abracadabra” → true
      * 	“Whippersnapper” → false
      */
 
+    public static boolean oneLast(String s){
+       String index = "";
+       if(s.indexOf(index) == s.lastIndexOf(index)) {
+           return true;
+       }
+        return false;
+    }
+
+    /** 11
+     * Напишите метод, который принимает на вход предложение и возвращает
+     * слова из этого предложения в виде массива слов
+     * Test Data:
+     * “QA for Everyone” → {“QA”, “for”, “Everyone”}
+     * “Александр Сергеевич Пушкин” → {“Александр”, “Сергеевич”, “Пушкин”}
+     */
+
+    public static String[] ArrayString(String str){
+       String[] arrayStr = str.split(" ");
+       return arrayStr;
+    }
+
+
+
 
     public static void main(String[] args) {
-        String s = "\"As of March 2022, Java 18 is the latest version";
-        System.out.println(indexOneLast("Abracadabra","b"));
-        System.out.println(indexOneLast("Whippersnapper","p"));
+//        String s = "\"As of March 2022, Java 18 is the latest version";
+//        System.out.println(oneLast("Abracadabra"));
+//        System.out.println(oneLast("Whippersnapper"));
+
+        System.out.println(Arrays.toString(ArrayString("QA for Everyone")));
+        System.out.println(Arrays.toString(ArrayString("Александр Сергеевич Пушкин")));
 
     }
 
