@@ -209,9 +209,8 @@ public class Algorithms {
 
     public static String[] arrayName(String str) {
         String[] arrayStr = str.split(" ");
-//        for(int i= 0; i < str.length(); i++){
-        System.out.println("\"Имя: " + arrayStr[0] + "\" , \" Фамилия: " + arrayStr[1] +
-                "\" , \" Отчество: " + arrayStr[2] + "\" ");
+        System.out.println("\"Имя: " + arrayStr[0] + "\" , \"Отчество: " + arrayStr[1] +
+                "\" , \"Фамилия: " + arrayStr[2] + "\" ");
         return arrayStr;
     }
 
