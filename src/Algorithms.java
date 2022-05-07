@@ -253,14 +253,29 @@ public class Algorithms {
     }
 
 
-    public static void main(String[] args) {
-//        String s = "\"As of March 2022, Java 18 is the latest version";
-//        System.out.println(oneLast("Abracadabra"));
-//        System.out.println(oneLast("Whippersnapper"));
+    /** 14
+     *Написать метод,  который принимает на вход 2 буквы и возвращает true,
+     * если первая буква встречается раньше второй, иначе метод возвращает false
+     * method(“a”, “m”) → true
+     * method(“m”, “l”) → false
+     */
 
-        System.out.println(sumABC("abc"));
-        System.out.println(sumABC("ABC"));
-        System.out.println(sumABC("123"));
+    /** 15
+     *  Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
+     * Test Data:
+     * “1, 2, 3, 4, 5” → {1, 2, 3, 4, 5}
+     * (Без форматирования)
+     */
+
+    public static String[] stringToNumbers(String str){
+        String[] arrayString = str.split(",");
+        return arrayString;
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println(Arrays.toString(stringToNumbers("1, 2, 3, 4, 5")));
     }
 
 
