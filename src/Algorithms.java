@@ -177,8 +177,7 @@ public class Algorithms {
      */
 
     public static boolean oneLast(String s) {
-        String index = "";
-        if (s.indexOf(index) == s.lastIndexOf(index)) {
+        if (s.indexOf(0) == s.indexOf(s.length() - 1)) {
             return true;
         }
         return false;
@@ -214,16 +213,30 @@ public class Algorithms {
         return arrayStr;
     }
 
+    /** 13
+     * Написать метод, который возвращает сумму всех букв слова
+     * “abc” → 294
+     * “ABC” → 198
+     * “123” → 0 (это не буквы)
+     */
+    public static int sumABC(String str){
+        int sum = 0;
+        for (int i = 0; i <= str.length(); i++){
+            sum = sum + str.charAt(i);
+            System.out.println(sum);
+        }
+        return sum;
+    }
+
+
+
 
     public static void main(String[] args) {
 //        String s = "\"As of March 2022, Java 18 is the latest version";
 //        System.out.println(oneLast("Abracadabra"));
 //        System.out.println(oneLast("Whippersnapper"));
 
-//        System.out.println(Arrays.toString(ArrayString("QA for Everyone")));
-//        System.out.println(Arrays.toString(ArrayString("Александр Сергеевич Пушкин")));
-        System.out.println(Arrays.toString(arrayName("Александр Сергеевич Пушкин")));
-
+        System.out.println(sumABC("abc"));
     }
 
 
