@@ -163,6 +163,9 @@ public class Algorithms {
      * “Whippersnapper”, “p” → “ppersnapp”
      */
     public static String indexOneLast(String s, String index) {
+        if (s.isEmpty() == false) {
+            s.trim();
+        }
         return s.substring(s.indexOf(index), s.lastIndexOf(index));
     }
 
@@ -177,8 +180,11 @@ public class Algorithms {
      */
 
     public static boolean oneLast(String s) {
-        if (s.indexOf(0) == s.indexOf(s.length() - 1)) {
-            return true;
+        if (s.isEmpty() == false) {
+            s.trim();
+            if (s.indexOf(0) == s.indexOf(s.length() - 1)) {
+                return true;
+            }
         }
         return false;
     }
@@ -193,6 +199,9 @@ public class Algorithms {
      */
 
     public static String[] ArrayString(String str) {
+        if (str.isEmpty() == false) {
+            str.trim();
+        }
         String[] arrayStr = str.split(" ");
         return arrayStr;
     }
@@ -207,28 +216,36 @@ public class Algorithms {
      */
 
     public static String[] arrayName(String str) {
-        String[] arrayStr = str.split(" ");
-        System.out.println("\"Имя: " + arrayStr[0] + "\" , \"Отчество: " + arrayStr[1] +
-                "\" , \"Фамилия: " + arrayStr[2] + "\" ");
-        return arrayStr;
+        if (str.isEmpty() == false) {
+            str.trim();
+            String[] arrayStr = str.split(" ");
+            System.out.println("\"Имя: " + arrayStr[0] + "\" , \"Отчество: " + arrayStr[1] +
+                    "\" , \"Фамилия: " + arrayStr[2] + "\" ");
+            return arrayStr;
+        }
+        return new String[]{};
     }
 
-    /** 13
+    /**
+     * 13
      * Написать метод, который возвращает сумму всех букв слова
      * “abc” → 294
      * “ABC” → 198
      * “123” → 0 (это не буквы)
      */
-    public static int sumABC(String str){
-        int sum = 0;
-        for (int i = 0; i <= str.length(); i++){
-            sum = sum + str.charAt(i);
-            System.out.println(sum);
+    public static int sumABC(String str) {
+        if (str.isEmpty() == false) {
+            str.trim();
+            int sum = 0;
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) >= 65) {
+                    sum = sum + str.charAt(i);
+                }
+            }
+            return sum;
         }
-        return sum;
+        return 0;
     }
-
-
 
 
     public static void main(String[] args) {
@@ -237,6 +254,8 @@ public class Algorithms {
 //        System.out.println(oneLast("Whippersnapper"));
 
         System.out.println(sumABC("abc"));
+        System.out.println(sumABC("ABC"));
+        System.out.println(sumABC("123"));
     }
 
 
