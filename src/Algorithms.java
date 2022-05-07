@@ -179,6 +179,7 @@ public class Algorithms {
      * “Whippersnapper” → false
      */
 
+
     public static boolean oneLast(String s) {
         if (s.isEmpty() == false) {
             s.trim();
@@ -188,6 +189,7 @@ public class Algorithms {
         }
         return false;
     }
+
 
     /**
      * 11
@@ -205,6 +207,7 @@ public class Algorithms {
         String[] arrayStr = str.split(" ");
         return arrayStr;
     }
+
 
     /**
      * 12
@@ -226,6 +229,7 @@ public class Algorithms {
         return new String[]{};
     }
 
+
     /**
      * 13
      * Написать метод, который возвращает сумму всех букв слова
@@ -233,6 +237,7 @@ public class Algorithms {
      * “ABC” → 198
      * “123” → 0 (это не буквы)
      */
+
     public static int sumABC(String str) {
         if (str.isEmpty() == false) {
             str.trim();
