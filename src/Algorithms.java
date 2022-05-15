@@ -69,7 +69,6 @@ public class Algorithms {
         return str;
     }
 
-
     /**
      * 4
      * Написать алгоритм RemoveAllSpaces.
@@ -179,10 +178,8 @@ public class Algorithms {
 
     public static boolean oneLast(String s) {
         if (s.isEmpty() == false) {
-            s.trim();
-            if (s.indexOf(0) == s.indexOf(s.length() - 1)) {
-                return true;
-            }
+            s.trim().toLowerCase();
+            return s.substring(0,1).equals(s.substring(s.length() - 1)))
         }
         return false;
     }
@@ -228,7 +225,7 @@ public class Algorithms {
 
 
     /**
-     * 13
+     * 13   //аскитаблица
      * Написать метод, который возвращает сумму всех букв слова
      * “abc” → 294
      * “ABC” → 198
@@ -240,8 +237,8 @@ public class Algorithms {
             str.trim();
             int sum = 0;
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) >= 65) {
-                    sum = sum + str.charAt(i);
+                if (str.charAt(i) > 64 && str.charAt(i) < 91 || str.charAt(i) > 96 && str.charAt(i) <123) {
+                    sum += str.charAt(i);
                 }
             }
             return sum;
