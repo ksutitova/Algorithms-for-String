@@ -333,6 +333,23 @@ public class Algorithms {
         return count;
     }
 
+    /** 20 removeDuplicates
+     *
+     */
+
+    public String removeDuplicatesAlgorithm(String text){
+        String result = " ";
+        if( text != " "){
+            text = text.toLowerCase();
+            for(int i = 0; i < text.length();){
+                result+= String.valueOf(text.charAt(i));
+                text = text.replace(String.valueOf(text.charAt(i))," ");
+            }
+            return result;
+        }
+        return result;
+    }
+
 
     public static void main(String[] args) {
         String str = "    QA   4  Everyone   ";
