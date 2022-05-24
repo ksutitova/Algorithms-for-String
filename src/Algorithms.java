@@ -248,7 +248,7 @@ public class Algorithms {
 
 
     /**
-     * 14
+     * 13
      * Написать метод,  который принимает на вход 2 буквы и возвращает true,
      * если первая буква встречается раньше второй, иначе метод возвращает false
      * method(“a”, “m”) → true
@@ -263,7 +263,7 @@ public class Algorithms {
 
 
     /**
-     * 15
+     * 14
      * Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
      * Test Data:
      * “1, 2, 3, 4, 5” → {1, 2, 3, 4, 5}
@@ -276,7 +276,7 @@ public class Algorithms {
     }
 
     /**
-     * 16
+     * 15
      * Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers, StringToNumbersAndSpaces следуя примеру на сайте: https://allcalc.ru/node/2030
      * Каждый алгоритм принимает строку,  и удаляет ненужные символы:
      * удалить все кроме букв
@@ -341,7 +341,7 @@ public class Algorithms {
         String result = "";
         if (str.isEmpty() == false) {
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) > 47 && str.charAt(i) < 58 || str.charAt(i) == ' ') {
+                if (str.charAt(i) > 47 && str.charAt(i) < 58 || str.charAt(i) == ' ' ) {
                     result = result + str.charAt(i);
                 }
             }
@@ -351,23 +351,25 @@ public class Algorithms {
 
 
     /**
-     * 17
+     * 16
      * Напишите алгоритм CountWords, который принимает на вход текст и слово,
      * и считает все вариации этого слова в тексте:
-     *
-     * @return
      */
 
-    public static int countWords(String text, String s) {
-        int count = 0;
-//        text.substring(s.indexOf("Java"), s.lastIndexOf("Java") +4);
-        String[] arrayStr = text.split(" ");
-        for (int i = 0; i < text.length(); i++) {
-            if (arrayStr[i] == text.substring(s.indexOf(s))) {
-                count++;
+    public static int countWords(String text, String word) {
+        if (text.isEmpty() == false && word.isEmpty() == false) {
+            text.toLowerCase().replace(",", " ").replace(".", " ");
+            word = word.toLowerCase();
+            String[] arr = text.split(" ");
+            int count = 0;
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i].equals(word)) {
+                    count++;
+                }
             }
+            return count;
         }
-        return count;
+        return -1;
     }
 
     /**
@@ -386,7 +388,6 @@ public class Algorithms {
         }
         return result;
     }
-
 
 
 }
