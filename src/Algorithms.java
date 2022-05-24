@@ -1,6 +1,3 @@
-import java.util.Arrays;
-
-
 public class Algorithms {
     /**
      * 1
@@ -370,6 +367,23 @@ public class Algorithms {
             return count;
         }
         return -1;
+    }
+
+    /** 18
+     * Написать алгоритм ReverseString, который переворачивает строку:
+     Test Data:
+     “Abracadabra” → “arbadacarbA”
+     */
+
+    public String reverseString(String str){
+        if( str != null && str.length() > 0){
+            String reverse = "";
+            for (int i = str.length() - 1; i >= 0; i--){
+                reverse = reverse.concat(Character.toString(str.charAt(i)));
+            }
+            return reverse;
+        }
+        return "";
     }
 
     /**
