@@ -310,8 +310,19 @@ public class Algorithms {
     }
 
     public static String stringToNumber(String str) {
-
-        return str;
+        String result = "";
+        if (str.isEmpty() == false) {
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) == '1' || str.charAt(i) == '2' ||
+                        str.charAt(i) == '3' || str.charAt(i) == '4' ||
+                        str.charAt(i) == '5' || str.charAt(i) == '6' ||
+                        str.charAt(i) == '7' || str.charAt(i) == '8' ||
+                        str.charAt(i) == '9' || str.charAt(i) == '0' ) {
+                    result = result + str.charAt(i);
+                }
+            }
+        }
+        return result;
     }
 
     public static String StringToNumbersAndSpaces(String str) {
