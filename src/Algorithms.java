@@ -329,7 +329,7 @@ public class Algorithms {
         String result = "";
         if (str.isEmpty() == false) {
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) > 47 || str.charAt(i) < 58) {
+                if (str.charAt(i) > 47 && str.charAt(i) < 58) {
                     result = result + str.charAt(i);
                 }
             }
@@ -338,8 +338,15 @@ public class Algorithms {
     }
 
     public static String StringToNumbersAndSpaces(String str) {
-
-        return str;
+        String result = "";
+        if (str.isEmpty() == false) {
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) > 47 && str.charAt(i) < 58 || str.charAt(i) == ' ') {
+                    result = result + str.charAt(i);
+                }
+            }
+        }
+        return result;
     }
 
 
