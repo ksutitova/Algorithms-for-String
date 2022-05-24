@@ -99,7 +99,7 @@ public class Algorithms {
         if (str.isEmpty() == false) {
             str = str.toLowerCase();
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) == 'a') {
+                if (str.charAt(i) == 'a' ) {
                     count++;
                 }
             }
@@ -179,7 +179,7 @@ public class Algorithms {
     public static boolean oneLast(String s) {
         if (s.isEmpty() == false) {
             s.trim().toLowerCase();
-            return s.substring(0,1).equals(s.substring(s.length() - 1)))
+            return s.substring(0, 1).equals(s.substring(s.length() - 1));
         }
         return false;
     }
@@ -237,7 +237,7 @@ public class Algorithms {
             str.trim();
             int sum = 0;
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) > 64 && str.charAt(i) < 91 || str.charAt(i) > 96 && str.charAt(i) <123) {
+                if (str.charAt(i) > 64 && str.charAt(i) < 91 || str.charAt(i) > 96 && str.charAt(i) < 123) {
                     sum += str.charAt(i);
                 }
             }
@@ -247,103 +247,110 @@ public class Algorithms {
     }
 
 
-    /** 14
-     *Написать метод,  который принимает на вход 2 буквы и возвращает true,
+    /**
+     * 14
+     * Написать метод,  который принимает на вход 2 буквы и возвращает true,
      * если первая буква встречается раньше второй, иначе метод возвращает false
      * method(“a”, “m”) → true
      * method(“m”, “l”) → false
      */
     public static Boolean AM(char a, char m) {
-        if((a > 64 && a < 91 || a > 96 && a < 123) && (m > 64 && m < 91 || m > 96 && m < 123)){
-            return  Character.toLowerCase(a) < Character.toLowerCase(m);
+        if ((a > 64 && a < 91 || a > 96 && a < 123) && (m > 64 && m < 91 || m > 96 && m < 123)) {
+            return Character.toLowerCase(a) < Character.toLowerCase(m);
         }
-        return  null;
+        return null;
     }
 
 
-    /** 15
-     *  Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
+    /**
+     * 15
+     * Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
      * Test Data:
      * “1, 2, 3, 4, 5” → {1, 2, 3, 4, 5}
      * (Без форматирования)
      */
 
-    public static String[] stringToNumbers(String str){
+    public static String[] stringToNumbers(String str) {
         String[] arrayString = str.split(",");
         return arrayString;
     }
 
-    /** 16
+    /**
+     * 16
      * Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers, StringToNumbersAndSpaces следуя примеру на сайте: https://allcalc.ru/node/2030
      * Каждый алгоритм принимает строку,  и удаляет ненужные символы:
      * удалить все кроме букв
-     *
      */
 
-    public static String[] stringToLetters (String str){
+    public static String stringToLetters(String str) {
+        String result = "";
         if (str.isEmpty() == false) {
-            str.trim();
-            String[] newStr = new String[]{};
             for (int i = 0; i < str.length(); i++) {
-                if (str.charAt(i) >= 65) {
-                    newStr[i] = Character.toString(str.charAt(i));
-//                    str = str.replace(str.substring(i)," ");
+                if (str.charAt(i) >= 65 && str.charAt(i) <= 90 || str.charAt(i) >= 97 && str.charAt(i) <= 122) {
+                    result = result + str.charAt(i);
                 }
             }
-            return newStr;
         }
-        return new String[]{};
+        return result;
     }
 
-//    private static char newStr(int i) {
-//    }
 
+    public static String stringToLettersAndSpaces(String str) {
+        String result = "";
+        if (str.isEmpty() == false) {
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) >= 65 && str.charAt(i) <= 90 ||
+                        str.charAt(i) >= 97 && str.charAt(i) <= 122 ||
+                        str.charAt(i) == 32) {
+                    result = result + str.charAt(i);
+                }
+            }
+        }
+        return result;
+    }
 
-    public static String stringToLettersAndSpaces (String str){
+    public static String stringToNumber(String str) {
 
         return str;
     }
 
-    public static String stringToNumber (String str){
-
-        return str;
-    }
-
-    public static String StringToNumbersAndSpaces (String str){
+    public static String StringToNumbersAndSpaces(String str) {
 
         return str;
     }
 
 
-    /** 17
+    /**
+     * 17
      * Напишите алгоритм CountWords, который принимает на вход текст и слово,
      * и считает все вариации этого слова в тексте:
+     *
      * @return
      */
 
-    public static int countWords(String text, String s){
+    public static int countWords(String text, String s) {
         int count = 0;
 //        text.substring(s.indexOf("Java"), s.lastIndexOf("Java") +4);
         String[] arrayStr = text.split(" ");
-        for (int i = 0; i < text.length(); i++){
-            if(arrayStr[i] == text.substring(s.indexOf(s))){
+        for (int i = 0; i < text.length(); i++) {
+            if (arrayStr[i] == text.substring(s.indexOf(s))) {
                 count++;
             }
         }
         return count;
     }
 
-    /** 20 removeDuplicates
-     *
+    /**
+     * 20 removeDuplicates
      */
 
-    public String removeDuplicatesAlgorithm(String text){
+    public String removeDuplicatesAlgorithm(String text) {
         String result = " ";
-        if( text != " "){
+        if (text != " ") {
             text = text.toLowerCase();
-            for(int i = 0; i < text.length();){
-                result+= String.valueOf(text.charAt(i));
-                text = text.replace(String.valueOf(text.charAt(i))," ");
+            for (int i = 0; i < text.length(); ) {
+                result += String.valueOf(text.charAt(i));
+                text = text.replace(String.valueOf(text.charAt(i)), " ");
             }
             return result;
         }
@@ -351,25 +358,5 @@ public class Algorithms {
     }
 
 
-    public static void main(String[] args) {
-        String str = "    QA   4  Everyone   ";
-
-        System.out.println(removeAllSpaces(str));
-//        System.out.println(AM('%','*'));
-//        System.out.println(Arrays.toString(countWords("As of March 2022, Java 18 is the latest version, " +
-//                "while Java 17, 11 and 8 are the current long-term support (LTS) versions. Oracle released the " +
-//                "last zero-cost public update for the legacy version Java 8 LTS in January 2019 for commercial java " +
-//                "use, although it will otherwise still support Java 8 with public updates for personal use indefinitely." +
-//                " Other vendors have begun to offer zero-cost builds of OpenJDK 8 and 11 that are still receiving " +
-//                "security and other upgrades", "Java")));
-
-//        System.out.println(Arrays.toString(stringToLetters("dj406.,m")));
-    }
-
 
 }
-
-/**
- *
- */
-
