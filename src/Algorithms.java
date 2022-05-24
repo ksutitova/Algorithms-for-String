@@ -325,6 +325,18 @@ public class Algorithms {
         return result;
     }
 
+    public static String stringToNumberVar2(String str) {
+        String result = "";
+        if (str.isEmpty() == false) {
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) > 47 || str.charAt(i) < 58) {
+                    result = result + str.charAt(i);
+                }
+            }
+        }
+        return result;
+    }
+
     public static String StringToNumbersAndSpaces(String str) {
 
         return str;
